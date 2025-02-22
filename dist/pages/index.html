@@ -29,46 +29,45 @@
         <h1 class="text-amber-300 font-bold text-4xl">Cassia Casamentos</h1>
         <p class="text-amber-300 mt-3 font-medium">Transformando momentos especiais em música</p>
         <ul class="flex justify-center items-center flex-col gap-6 mt-6">
-            <li><button id="saibaMais" class="text-amber-50 border border-amber-50 px-24 py-1">Saiba Mais</button></li>
+            <li><button id="saibaMais" class="text-amber-50 border border-amber-50 px-24 py-1 cursor-pointer">Saiba Mais</button></li>
             <li><a href="#" class="text-black bg-amber-300 font-semibold px-24 py-1">Orçamento</a></li>
         </ul>
 
 
-        <div id="modal" class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden overflow-x-hidden">
-            <div class="bg-black shadow-[0_0_15px_rgba(255,255,255,0.8)] p-6 rounded-2xl w-[90%] max-w-md">
-                >
-                <div class="">
-                    <h3 class="font-bold text-2xl text-amber-300">Conheça mais sobre Cassia</h3>
-                </div>
-
-                <!-- Carrossel Swiper -->
-                <div class="mt-4">
+        <div id="modal" class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center">
+            <div id="modal-content" class="bg-black shadow-[0_0_15px_rgba(255,255,255,0.8)] p-6 rounded-2xl w-[90%] max-w-md flex flex-col mx-auto mt-40">
+                <h3 class="font-bold text-2xl text-amber-300">Conheça mais sobre Cassia</h3>
+        
+                <div class="mt-4 flex flex-col gap-4">
                     <div class="swiper mySwiper mx-auto w-full">
                         <div class="swiper-wrapper mx-auto">
                             <div class="swiper-slide w-full">
                                 <img src="img/image_15.jpg" alt="Imagem 1" class="rounded-lg w-full mb-5">
-                                <p class="text-amber-300 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Culpa ducimus dicta excepturi similique maxime exercitationem inventore fuga vero,
-                                    eligendi quo voluptatum quod esse, a quisquam sint, maiores architecto aliquid
-                                    nesciunt.</p>
+                                <h2 class="bg-amber-300 font-medium">Cantata de Natal contrada em lojas</h2>
+                                <div class="p-4">
+                                    <p class="text-amber-300 ">Lorem ipsum dolor sit amet...</p>
+                                </div>
                             </div>
                             <div class="swiper-slide w-full">
                                 <img src="img/image_16.jpg" alt="Imagem 2" class="rounded-lg w-full mb-5">
-                                <p class="text-amber-300 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Culpa ducimus dicta excepturi similique maxime exercitationem inventore fuga vero,
-                                    eligendi quo voluptatum quod esse, a quisquam sint, maiores architecto aliquid
-                                    nesciunt.</p>
+                                <h2 class="bg-amber-300 font-medium">Cantata de Natal para o público local</h2>
+                                <div class="p-4">
+                                    <p class="text-amber-300 ">Lorem ipsum dolor sit amet...</p>
+                                </div>
                             </div>
                             <div class="swiper-slide w-full">
                                 <img src="img/image_17.jpg" alt="Imagem 3" class="rounded-lg w-full mb-5">
-                                <p class="text-amber-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Culpa ducimus dicta excepturi similique maxime exercitationem inventore fuga vero,
-                                    eligendi quo voluptatum quod esse, a quisquam sint, maiores architecto aliquid
-                                    nesciunt.</p>
+                                <h2 class="bg-amber-300 font-medium">Cantata de Natal igreja Sto Antonio</h2>
+                                <div class="p-4">
+                                    <p class="text-amber-300 ">Lorem ipsum dolor sit amet...</p>
+                                </div>
                             </div>
                         </div>
+                        <div class="mt-8 p-8">
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div><button id="fecharModal" class=" text-black bg-amber-300 cursor-pointer p-2 rounded-2xl font-medium">Fechar</button></div>
                 </div>
             </div>
         </div>
@@ -79,13 +78,13 @@
         </section>
 
         <section class="h-screen text-center mt-20 w-full relative ">
-            <h2 class="text-amber-300 font-bold text-3xl text-center mb-28">
-                Por que contratar a equipe Cassia Casamento?
+            <h2 class="text-amber-300 font-bold text-3xl text-center mb-12">
+                Por que contratar a equipe Cassia Casamentos?
             </h2>
 
             <article class="flex flex-col w-full">
                 <div class="flex flex-col items-center mb-12">
-                    <img src="img/aperto-maos.jpg" class="w-40 h-32" alt="Compromisso">
+                    <img src="img/aperto-maos.jpg" class="w-40 h-40" alt="Compromisso">
                     <h3 class="text-amber-300 font-bold text-3xl text-center">Compromisso</h3>
                     <p class="text-amber-300 w-80 mt-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla provident odio laudantium
@@ -94,7 +93,7 @@
                 </div>
 
                 <div class="flex flex-col items-center mb-12">
-                    <img src="img/feedback.jpg" class="w-40 h-32" alt="Feedback">
+                    <img src="img/feedback.jpg" class="w-40 h-40" alt="Feedback">
                     <h3 class="text-amber-300 font-bold text-3xl text-center">Feedback positivo</h3>
                     <p class="text-amber-300 w-80 mt-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla provident odio laudantium
@@ -103,7 +102,7 @@
                 </div>
 
                 <div class="flex flex-col items-center mb-12">
-                    <img src="img/microfone.jpg" class="w-40 h-32" alt="Qualidade">
+                    <img src="img/microfone.jpg" class="w-40 h-40" alt="Qualidade">
                     <h3 class="text-amber-300 font-bold text-3xl text-center">Qualidade</h3>
                     <p class="text-amber-300 w-80 mt-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla provident odio laudantium
@@ -112,7 +111,7 @@
                 </div>
 
                 <div class="flex flex-col items-center mb-12">
-                    <img src="img/medalha.jpg" class="w-40 h-32" alt="Reconhecimento">
+                    <img src="img/medalha.jpg" class="w-40 h-40" alt="Reconhecimento">
                     <h3 class="text-amber-300 font-bold text-3xl text-center">Reconhecimento</h3>
                     <p class="text-amber-300 w-80 mt-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla provident odio laudantium
