@@ -1,6 +1,7 @@
 const outro = document.getElementById('outro');
 const outroText = document.getElementById('outro-contratante');
-outro.addEventListener('click', () => {
+outro.addEventListener('click', (evento) => {
+    evento.preventDefault();
   if (outro.checked) {
     outroText.style.display = 'block';
   } else if (!outro.checked) {
