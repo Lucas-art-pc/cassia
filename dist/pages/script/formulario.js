@@ -5,6 +5,7 @@ const nome = document.getElementById('nome');
 const dataCasamento = document.getElementById('data-casamento');
 const equipe = document.getElementById('equipe');
 const btnEnviar = document.getElementById('btn-enviar');
+const localidade = document.getElementById('local');
 
 function mostrarOutro() {
     outroDiv.style.display = contratante.value === 'outro' ? 'block' : 'none';
@@ -16,7 +17,7 @@ btnEnviar.addEventListener('click', (evento) => {
     evento.preventDefault();
 
     // Verifica se os campos essenciais estão preenchidos
-    if (!nome.value || !dataCasamento.value || !equipe.value || !contratante.value) {
+    if (!nome.value || !dataCasamento.value || !equipe.value || !contratante.value || !localidade.value) {
         alert("Por favor, preencha todos os campos obrigatórios.");
         return;
     }
@@ -39,7 +40,7 @@ btnEnviar.addEventListener('click', (evento) => {
         return;
     }
 
-    const mensagem = `Olá, meu nome é ${nome.value}, sou ${contratanteTexto} e gostaria de contratar a equipe para o dia ${dataCasamento.value}, com a equipe de ${equipe.value}.`;
+    const mensagem = `Olá, meu nome é ${nome.value}, sou ${contratanteTexto} e gostaria de contratar a equipe para o dia ${dataCasamento.value}, na localidade: ${localidade.value} com a equipe de ${equipe.value}.`;
     const mensagemFinal = encodeURIComponent(mensagem);
     const WhatsApp = `https://api.whatsapp.com/send?phone=${fone}&text=${mensagemFinal}`;
 
