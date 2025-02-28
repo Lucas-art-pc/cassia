@@ -6,57 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet">
 </head>
+
 <body class="bg-black">
     <div class="container mx-auto">
-            <header class="p-6 flex justify-between items-center">
-                <img src="img/logo-simples.png" alt="logo cassia" class="w-14 h-14 m-3">
-                <nav class="mr-4">
-                    <ul class="text-amber-300 flex gap-4 flex-wrap md:flex-nowrap">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Equipes</a></li>
-                        <li><a href="#">Trabalhos</a></li>
-                    </ul>
-                </nav>
-            </header>
-        
+        <header class="p-6 flex justify-between items-center">
+            <img src="img/logo-simples.png" alt="logo cassia" class="w-14 h-14 m-3">
+            <nav class="mr-4">
+                <ul class="text-amber-300 flex gap-4 flex-wrap md:flex-nowrap">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="equipes.html">Equipes</a></li>
+                    <li><a href="#">Trabalhos</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <main class="w-[75%] mx-auto p-4 ">
-            <img src="img/logo_cassia_semFundo.png" alt="imagem logo cassia" class="mb-12 mx-auto w-[70%]">
+            <img src="img/logo_cassia_semFundo.png" alt="imagem logo cassia" class="mb-12 mx-auto w-[70%] xl:w-[35%]">
+            <h1 class="text-amber-300 text-center text-2xl font-bold mb-8 underline uppercase"><a href="equipes.html">Ver equipes
+                    disponíveis</a></h1>
             <form action="#" method="post">
                 <div class="mb-4">
                     <label for="nome" class="block text-amber-300">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="w-full p-2 border border-gray-300 rounded bg-gray-300" placeholder="Digite seu nome...">
+                    <input type="text" name="nome" id="nome"
+                        class="w-full p-2 border border-gray-300 rounded bg-gray-300" placeholder="Digite seu nome...">
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-amber-300">Data cerimônia:</label>
-                    <input type="date" name="data" id="data-casamento" class="w-full p-2 border border-gray-300 rounded bg-gray-300">
+                    <label for="date" class="block text-amber-300">Data cerimônia:</label>
+                    <input type="date" name="data" id="data-casamento"
+                        class="w-full p-2 border border-gray-300 rounded bg-gray-300">
                 </div>
-                <div class="my-3">
-                    <label class="block text-amber-300">Contratante:</label>
-                    <div class="mt-2 space-y-2 ">
-                        <div class="flex items-center">
-                            <input type="radio" id="civil" name="contratante" value="Noivo" required class="h-4 w-4 text-amber-300 border-gray-300 focus:ring-amber-300">
-                            <label for="civil" class="ml-2 text-amber-300">Noivo</label>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <input type="radio" id="religioso" name="contratante" value="Noiva" required class="h-4 w-4 text-amber-300 border-gray-300 focus:ring-blue-500">
-                            <label for="religioso" class="ml-2 text-amber-300">Noiva</label>
-                        </div>
-                        
-                        <div class="flex items-center">
-                            <input type="radio" id="outro" name="contratante" value="outro" required class="h-4 w-4 text-amber-300 border-gray-300 focus:ring-blue-500">
-                            <label for="ambos" class="ml-2 text-amber-300">Outro</label>
-                        </div>
-                        <div id="outro-contratante" class="my-4 hidden">
-                            <label for="nome" class="block text-amber-300">Quem é o(a) contratante dos serviços: </label>
-                            <input type="text" name="nome" id="nome-outro-contratante" class="w-full p-2 border border-gray-300 rounded bg-gray-300" placeholder="Ex: Mãe da noiva, Mãe do noivo...">
-                        </div>
-                    </div>
+
+                <div class="mb-4">
+                    <label for="mensagem" class="block text-amber-300">Local:</label>
+                   <input type="text" name="mensagem" id="mensagem"
+                        class="w-full p-2 border border-gray-300 rounded bg-gray-300" placeholder="Local da cerimônia...">
                 </div>
 
                 <div class="my-4">
+                    <label for="pacote" class="block text-amber-300">Contratante da cerimônia:</label>
+                    <select id="contratante" name="contratante" required
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-amber-300 focus:border-amber-300 bg-gray-300">
+                        <option value=""></option>
+                        <option value="Noivo">Noivo</option>
+                        <option value="Noiva">Noiva</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <div class="my-4 hidden" id="outro-contratante-div">
+                        <label for="outro-contratante" class="block text-amber-300">Outro Contratante</label>
+                        <input type="text" name="outro-contratante" id="outro-contratante"
+                            class="w-full p-2 border border-gray-300 rounded bg-gray-300" placeholder="Digite o nome...">
+                    </div>
+                </div>
+
+                
+
+                <div class="my-4">
                     <label for="pacote" class="block text-amber-300">Equipe Casamento:</label>
-                    <select id="equipe" name="pacote" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-amber-300 focus:border-amber-300 bg-gray-300" >
+                    <select id="equipe" name="pacote" required
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-amber-300 focus:border-amber-300 bg-gray-300">
                         <option value=""></option>
                         <option value="Voz e piano">Voz e piano</option>
                         <option value="Voz feminina e masculina">Voz feminina e masculina</option>
@@ -64,13 +72,9 @@
                     </select>
                 </div>
 
-               
-                <div class="mb-4">
-                    <label for="mensagem" class="block text-amber-300">Mensagem:</label>
-                    <textarea name="mensagem" id="mensagem" class="w-full p-2 border border-gray-300 rounded  bg-gray-300" placeholder="Digite alguma observação..."></textarea>
-                </div>
                 <div class="mx-auto text-center mt-8">
-                    <button type="submit" id="btn-enviar" class="bg-amber-300 text-black font-medium p-2 rounded hover:bg-white cursor-pointer w-[80%]">Enviar</button>
+                    <button type="submit" id="btn-enviar"
+                        class="bg-amber-300 text-black font-medium p-2 rounded hover:bg-white cursor-pointer w-[80%]">Enviar</button>
                 </div>
             </form>
         </main>
@@ -82,11 +86,12 @@
                 <li><a href="#" class="hover:underline">Contato</a></li>
                 <li><a href="#" class="hover:underline">Privacidade</a></li>
             </ul>
-            <p class="text-white text-center">Desenvoldido por: Lucas Medina</p>
+            <p class="text-white text-center">Desenvolvido por: Lucas Medina</p>
         </footer>
     </div>
 
     <script src="script/formulario.js"></script>
-    
+
 </body>
+
 </html>
